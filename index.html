@@ -78,10 +78,52 @@
             background: #808080;
 
         }
+        .active{
+            background-color: #0099ff;
+        }
 
+        /*Responsive layout css*/
+        @media (max-width:840px)
+        
+        { /*drop right column down*/
+            #leftcolumn{
+                margin-left: -100%;
+            }
+            #rightcolumn{
+                float:none;
+                width:100%;
+                margin-left: 0;
+                clear: both;
+            }
+            #contentcolumn{
+                margin-right: 0; /*set margin to LeftColumnWidth*/
+            }
+        }
+        @media (max-width:600px){
+            #leftcolumn{
+                float: none;
+                width: 100%;
+                clear: both;
+                margin-left: 0;
+            }
+            contentcolumn {
+                margin-left: 0;
+            }
+        }
+        
     </style> <!--we can use some sites to get color codes eg.colorpicker.com-->
 </head>
 <body>
+    <div id="container">
+        <div id="header">
+            <ul style="display: inline;">
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">News</a></li>
+                <li><a href="#about">Contact</a></li>
+
+            </ul>
+        </div>
    <table width="600" border="0" cellspacing="1" cellpadding="1"> 
 <tr>
     <td>Heading 1</td>
@@ -117,5 +159,6 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 </td>
 </tr>
 </table>
+</div>
 </body>
 </html>
